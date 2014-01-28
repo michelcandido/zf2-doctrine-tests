@@ -16,6 +16,6 @@
         "phpunit/phpunit": "3.7.*"
     },
     "autoload": {
-        "psr-0": { "MichelCandido\\Core": ["module/Core/src/"] }
+        "psr-0": { "MichelCandido\\Core\\": ["module/Core/src/"] }
     }
 }
