@@ -9,11 +9,7 @@ use RuntimeException;
 
 error_reporting(E_ALL | E_STRICT);
 chdir(__DIR__);
-/**
- * 
- * @author Michel Candido <michel@michelcandido.com.br>
- *
- */
+
 class Bootstrap
 {
     protected static $serviceManager;

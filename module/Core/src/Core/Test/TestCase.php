@@ -1,4 +1,12 @@
 <?php
+/**
+ * Michel Candido (http://michelcandido.com.br/)
+ * 
+ * @license http://pt.wikipedia.org/wiki/Licença_BSD Licença BSD
+ * @version GIT: <git_id>
+ * @link    http://github.com/michelcandido/
+ */
+
 namespace Core\Test;
 
 use Zend\Db\Adapter\Adapter;
@@ -9,29 +17,28 @@ use Zend\Mvc\Service\ServiceManagerConfig;
 use Zend\Mvc\MvcEvent;
 use Symfony\Component\Console\Tests\ApplicationTest;
 use Application\Bootstrap;
-/**
- * 
- * @author Michel Candido <michel@michelcandido.com.br>
- *
- */
+
 abstract class TestCase extends \PHPUnit_Framework_TestCase
 {
    /**
     * 
     * @var ServiceManagerConfig
     */
-	protected $serviceManager;
-	
-	public function __construct(){
-		parent::__construct();
-		$this->serviceManager =  clone Bootstrap::getServiceManager();
-	}
-    public function setup(){    	
+    protected $serviceManager;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->serviceManager =  clone Bootstrap::getServiceManager();
+    }
+    public function setup()
+    {
         parent::setup();
         $this->createDatabase();
     }
 
-    protected function tearDown(){
+    protected function tearDown()
+    {
         parent::tearDown();
         $this->dropDatabase();
         $this->getEntityManager()->clear();
@@ -46,7 +53,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
      */
     protected function getService($service)
     {
-    	$sm =  $this->serviceManager->get($service);
+        $sm = $this->serviceManager->get($service);
         return $sm;
     }
 
@@ -60,7 +67,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
         $queries = include  Bootstrap::getModulePath().'/tests/data/test.data.php';
         sort($queries);
         foreach ($queries as $query) {
-          $em->getConnection()->exec($query['create']);
+            $em->getConnection()->exec($query['create']);
         }
     }
 
@@ -69,11 +76,11 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
      */
     public function dropDatabase()
     {
-       	$em = $this->getEntityManager();	        
+        $em = $this->getEntityManager();
         $queries = include  Bootstrap::getModulePath().'/tests/data/test.data.php';
         arsort($queries);
         foreach ($queries as $query) {
-           $em->getConnection()->exec($query['drop']);
+            $em->getConnection()->exec($query['drop']);
         }
     }
 
@@ -81,7 +88,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
      * 
      * @return \Doctrine\ORM\EntityManager
      */
-    public function getEntityManager() 
+    public function getEntityManager()
     {
         return $this->serviceManager->get('EntityManager');
     }

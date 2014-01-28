@@ -21,17 +21,16 @@ return array(
     // The path in which to cache merged configuration.
     //'cache_dir' =>  './data/cache',
     // ...
-		
-				'doctrine' => array(
-						'connection' => array(
-								'orm_default' => array(
-										'driverClass' =>'Doctrine\DBAL\Driver\PDOMySql\Driver',
-										'params' => array(
-												'host'     => 'localhost',
-												'port'     => '3306',
-												'user'     => 'root',
-												'password' => 'root',
-												'dbname'   => 'tests_test',
-										))))
-	
+    'doctrine' => array(
+        'connection' => array(
+            'orm_default' => array(
+                'driverClass' => '\Doctrine\DBAL\Driver\PDOSqlite\Driver',
+                'params' => array(
+                    'charset' => 'utf8',
+                    'path'=> ':memory:'//__DIR__.'/../../data/database/test.sqlite',
+                )
+            )
+            )
+        ),
+
 );

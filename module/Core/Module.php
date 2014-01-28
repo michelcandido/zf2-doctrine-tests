@@ -3,15 +3,9 @@
 namespace Core;
 
 use Zend\Mvc\MvcEvent;
-/**
- * 
- * @author Michel Candido <michel@michelcandido.com.br>
- *
- */
+
 class Module
 {
-
-    
     public function getAutoloaderConfig()
     {
         return array(
@@ -29,7 +23,5 @@ class Module
     public function getConfig()
     {
         return include __DIR__ . '/config/module.config.php';
-    }
-
-    
+    }   
 }
