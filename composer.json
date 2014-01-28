@@ -6,7 +6,7 @@
         "framework",
         "zf2",
         "doctrine",
-        "phounit" 
+        "phpunit" 
     ],
     "homepage": "https://github.com/michelcandido/zf2-doctrine-tests",
     "require": {
