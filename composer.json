@@ -1,6 +1,6 @@
 {
     "name": "michelcandido/zf2-doctrine-tests",
-    "description": "Skeleton Application for Tests with Zend Framework 2 and Doctrine",
+    "description": "Tests with Zend Framework 2 and Doctrine",
     "license": "BSD",
     "keywords": [
         "framework",
@@ -14,5 +14,8 @@
         "zendframework/zendframework": ">2.2.0rc1",
         "doctrine/doctrine-orm-module": "0.7.*",
         "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-0": { "Core\\": ["src/"] }
     }
 }

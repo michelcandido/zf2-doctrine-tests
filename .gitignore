@@ -1,4 +1,6 @@
 vendor/*
-public/fonts/*
-public/captcha/*
-/nbproject/private/
+public/*
+nbproject/*
+module/Application/language/*
+config/autoload/local.php
+
