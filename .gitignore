@@ -1,6 +1,8 @@
 vendor/*
 public/*
+/public/*
 nbproject/*
+/nbproject/*
 module/Application/language/*
 config/autoload/local.php
 
