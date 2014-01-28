@@ -16,6 +16,6 @@
         "phpunit/phpunit": "3.7.*"
     },
     "autoload": {
-        "psr-0": { "Core\\": ["src/"] }
+        "psr-0": { "Core\\": ["module/Core/src/"] }
     }
 }
