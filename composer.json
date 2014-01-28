@@ -1,12 +1,14 @@
 {
-    "name": "zendframework/skeleton-application",
-    "description": "Skeleton Application for ZF2",
-    "license": "BSD-3-Clause",
+    "name": "michelcandido/zf2-doctrine-tests",
+    "description": "Skeleton Application for Tests with Zend Framework 2 and Doctrine",
+    "license": "BSD",
     "keywords": [
         "framework",
-        "zf2"
+        "zf2",
+        "doctrine",
+        "phounit"
     ],
-    "homepage": "http://framework.zend.com/",
+    "homepage": "https://github.com/michelcandido/zf2-doctrine-tests",
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": ">2.2.0rc1",
